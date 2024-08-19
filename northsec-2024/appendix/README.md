@@ -58,7 +58,7 @@ En recherchant sur Google "CVE urlsplit", on tombe sur un article qui explique q
 
 L'article : <https://medium.com/thesecmaster/how-to-fix-cve-2023-24329-url-parsing-issue-in-python-794018e4b57a#1005>
 
-Malheureusement, cette faille a été réparée sur la version utilisée sur le serveur, cette solution ne fonctionne malheureusement pas.
+Malheureusement, cette faille a été réparée sur la version utilisée sur le serveur, cette solution ne fonctionne donc pas.
 
 En cherchant un peu plus, on peut trouver le code source d'urlsplit sur GitHub, et c'est en particulier le `url = url.lstrip(_WHATWG_C0_CONTROL_OR_SPACE)` ([lien](https://github.com/python/cpython/blob/be257c58152e9b960827362b11c9ef2223fd6267/Lib/urllib/parse.py#L477)) qui nous intéresse. En effet, les espaces et les caractères de contrôles sont enlevés, mais pas les autres caractères Unicode.
 
