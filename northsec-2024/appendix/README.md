@@ -60,7 +60,9 @@ L'article : <https://medium.com/thesecmaster/how-to-fix-cve-2023-24329-url-parsi
 
 Malheureusement, cette faille a été réparée sur la version utilisée sur le serveur, cette solution ne fonctionne malheureusement pas.
 
-Cependant, en s'inspirant de la faille présentée, on peut essayer une variante similaire, en insérant au début de l'URL le caractère [Unicode demi-espace U+2009](https://www.compart.com/en/unicode/U+2009). On met donc comme payload "&ThinSpace;http://localhost:1234" où le premier caractère est un demi espace.
+En cherchant un peu plus, on peut trouver le code source d'urlsplit sur GitHub, et c'est en particulier le `url = url.lstrip(_WHATWG_C0_CONTROL_OR_SPACE)` ([lien](https://github.com/python/cpython/blob/be257c58152e9b960827362b11c9ef2223fd6267/Lib/urllib/parse.py#L477)) qui nous intéresse. En effet, les espaces et les caractères de contrôles sont enlevés, mais pas les autres caractères Unicode.
+
+En s'inspirant de la faille présentée et du code source de Python, on peut essayer une variante similaire, en insérant au début de l'URL le caractère [Unicode demi-espace U+2009](https://www.compart.com/en/unicode/U+2009). On met donc comme payload "&ThinSpace;http://localhost:1234" où le premier caractère est un demi espace.
 
 On obtient alors le message "Beneficial bacterias successfully delivered.", et le flag s'affiche dans notre console !!
 
