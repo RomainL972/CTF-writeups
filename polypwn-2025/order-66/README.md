@@ -61,4 +61,16 @@ Enfin, la ligne `mov rdi, PLACEHOLDER` permet de dynamiquement commencer la rech
 
 ### Script d'exploitation
 
-Le script permettant l'exploitation finale se trouve dans [solve.py](solve.py). Après avoir commencé l'exécution, le hint est extrait puis inséré dans le shellcode. Le shellcode est ensuite compilé (nécessite les outils standards de compilations ainsi que `nasm`), puis envoyé au programme. Enfin, le flag est affiché et les fichiers temporaires sont supprimés.
+Le script permettant l'exploitation finale se trouve dans [solve.py](solve.py). Après avoir commencé l'exécution, le hint est extrait puis inséré dans le shellcode. Le shellcode est ensuite compilé (nécessite les outils standards de compilations ainsi que `nasm`), puis envoyé au programme. Enfin, le flag est affiché et les fichiers temporaires sont supprimés. Résultat:
+
+```
+[+] Opening connection to ctf.polycyber.io on port 47641: Done
+Hint: 0x754775500000
+[+] Receiving all data: Done (85B)
+[*] Closed connection to ctf.polycyber.io port 47641
+find the Order 66 !
+Congrate, you find the order 66:
+polycyber{0rd3r_66_n0_m0r3_j3d1}
+```
+
+**Flag: polycyber{0rd3r_66_n0_m0r3_j3d1}**

