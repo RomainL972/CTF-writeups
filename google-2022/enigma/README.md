@@ -260,7 +260,7 @@ Even in the context of a competition with limited time, you have to remember to 
 
 ## Bonus
 
-What htop looked like while cracking Enigma: ![htop screenshot](https://git.step.polymtl.ca/romain/googlectf-enigma/-/raw/master/writeup/htop.png?inline=true)
+What htop looked like while cracking Enigma: ![htop screenshot](htop.png)
 
 ## References
 
@@ -279,4 +279,4 @@ Here is a list of URLs that helped me solve this challenge.
 - https://git.step.polymtl.ca/romain/googlectf-enigma : My Git repository
 - https://translate.google.com/ : A website useful when trying to understand german
 
-I would also like to thank [PolyHx](https://cyber.polyhx.polymtl.ca/) for inviting me in their CTF team, [Polytechnique Montréal](https://polymtl.ca/) for giving me access to countless academic papers online, and [Jimmy Bell](https://github.com/Ch0ufleur) for helping me translate my German plaintext into understandable text.
+I would also like to thank [PolyHx](https://polycyber.io/) for inviting me in their CTF team, [Polytechnique Montréal](https://polymtl.ca/) for giving me access to countless academic papers online, and [Jimmy Bell](https://github.com/Ch0ufleur) for helping me translate my German plaintext into understandable text.
