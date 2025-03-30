@@ -1,0 +1,5 @@
+exec-shellcode
+*.bin
+*.o
+*.exe
+shellcode-filled.nasm

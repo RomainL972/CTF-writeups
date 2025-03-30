@@ -1,0 +1,37 @@
+   0:   48 31 c0                xor    rax, rax
+   3:   b8 0a 00 00 00          mov    eax, 0xa
+   8:   50                      push   rax
+   9:   48 b8 72 64 65 72 20 36 36 3a   movabs rax, 0x3a36362072656472
+  13:   50                      push   rax
+  14:   48 b8 6e 64 20 74 68 65 20 6f   movabs rax, 0x6f2065687420646e
+  1e:   50                      push   rax
+  1f:   48 b8 2c 20 79 6f 75 20 66 69   movabs rax, 0x696620756f79202c
+  29:   50                      push   rax
+  2a:   48 b8 43 6f 6e 67 72 61 74 65   movabs rax, 0x65746172676e6f43
+  34:   50                      push   rax
+  35:   b8 01 00 00 00          mov    eax, 0x1
+  3a:   bf 01 00 00 00          mov    edi, 0x1
+  3f:   48 89 e6                mov    rsi, rsp
+  42:   ba 21 00 00 00          mov    edx, 0x21
+  47:   0f 05                   syscall
+  49:   48 31 c0                xor    rax, rax
+  4c:   50                      push   rax
+  4d:   48 b8 66 6c 61 67 2e 74 78 74   movabs rax, 0x7478742e67616c66
+  57:   50                      push   rax
+  58:   48 89 e7                mov    rdi, rsp
+  5b:   48 31 c0                xor    rax, rax
+  5e:   b8 02 00 00 00          mov    eax, 0x2
+  63:   48 31 f6                xor    rsi, rsi
+  66:   0f 05                   syscall
+  68:   48 89 c7                mov    rdi, rax
+  6b:   b8 00 00 00 00          mov    eax, 0x0
+  70:   48 89 e6                mov    rsi, rsp
+  73:   ba 20 00 00 00          mov    edx, 0x20
+  78:   0f 05                   syscall
+  7a:   b8 01 00 00 00          mov    eax, 0x1
+  7f:   bf 01 00 00 00          mov    edi, 0x1
+  84:   48 89 e6                mov    rsi, rsp
+  87:   0f 05                   syscall
+  89:   b8 3c 00 00 00          mov    eax, 0x3c
+  8e:   48 31 ff                xor    rdi, rdi
+  91:   0f 05                   syscall
